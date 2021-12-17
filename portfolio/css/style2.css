@@ -63,7 +63,7 @@ li {
   margin-bottom: 40px;
   text-align: center;
   letter-spacing: .05em;
-  color: #000;
+  color: #333;
 }
 
 .lead {
@@ -152,58 +152,20 @@ li {
   padding: 0 40px;
 }
 
-@keyframes tipsy {
-  0 {
-    transform: translateX(-50%) translateY(-50%) rotate(0deg);
-  }
-  100% {
-    transform: translateX(-50%) translateY(-50%) rotate(360deg);
-  }
-}
-
-body {
-  font-family: helvetica, arial, sans-serif;
-  background-color: #2e2e31;
-}
-
-.square {
-  color: #fffbf1;
-  text-shadow: 0 20px 25px #2e2e31, 0 40px 60px #2e2e31;
-  font-size: 40px;
+.main-visual-title {
+  font-size: 60px;
   font-weight: bold;
-  text-decoration: none;
-  letter-spacing: -3px;
-  margin: 0;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translateX(-50%) translateY(-50%);
+  line-height: 1.2;
+  margin-bottom: 5px;
+  letter-spacing: .1em;
 }
-
-.square:before,
-.square:after {
-  content: '';
-  padding: .9em .4em;
-  position: absolute;
-  left: 50%;
-  width: 100%;
-  top: 50%;
-  display: block;
-  border: 15px solid red;
-  transform: translateX(-50%) translateY(-50%) rotate(0deg);
-  animation: 10s infinite alternate ease-in-out tipsy;
+.main-visual-subtitle {
+  font-size: 20px;
+  font-weight: bold;
+  line-height: 1;
+  margin-bottom: 40px;
+  letter-spacing: .08em;
 }
-
-.square:before {
-  border-color: #d9524a #d9524a rgba(0, 0, 0, 0) rgba(0, 0, 0, 0);
-  z-index: -1;
-}
-
-.square:after {
-  border-color: rgba(0, 0, 0, 0) rgba(0, 0, 0, 0) #d9524a #d9524a;
-  box-shadow: 25px 25px 25px rgba(46, 46, 49, .8);
-}
-
 .main-visual-profile{
   display: flex;
   flex-wrap: wrap;
@@ -217,6 +179,9 @@ body {
 }
 .main-visual-img img {
   border-radius: 50%;
+}
+.main-visual-text {
+  flex: 1;
 }
 .main-visual-text p:not(:last-child) {
   margin-bottom: 30px;
@@ -372,15 +337,8 @@ body {
 /*--------------------------------
  Skill
 ---------------------------------*/
-.skill-title {
-  font-size: 34px;
-  font-weight: bold;
-  line-height: 1;
-  margin-bottom: 40px;
-  text-align: center;
-  letter-spacing: .05em;
-  color: #ccc;
-}
+
+
 
 .skill-list {
   display: flex;
@@ -409,11 +367,6 @@ body {
 
 .skill-name {
   margin-bottom: 3px;
-  color: #999;
-}
-
-.skill-text{
-  color: #fff;
 }
 
 /*--------------------------------
