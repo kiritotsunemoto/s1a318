@@ -186,10 +186,10 @@ body {
   padding: .9em .4em;
   position: absolute;
   left: 50%;
-  width: 100%;
-  top: 50%;
+  width: 155%;
+  top: 60%;
   display: block;
-  border: 15px solid red;
+  border: 20px solid red;
   transform: translateX(-50%) translateY(-50%) rotate(0deg);
   animation: 10s infinite alternate ease-in-out tipsy;
 }
@@ -220,6 +220,9 @@ body {
 }
 .main-visual-text p:not(:last-child) {
   margin-bottom: 30px;
+}
+.main-visual-subtitle{
+  font-size: 25px;
 }
 
 /*--------------------------------
