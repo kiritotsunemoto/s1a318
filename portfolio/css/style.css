@@ -1,5 +1,5 @@
 body {
-  font-family: "Montserrat","Helvetica Neue",Arial,"Hiragino Kaku Gothic ProN","Hiragino Sans",Meiryo,sans-serif;
+  font-family: 'Ubuntu', sans-serif;
   font-size: 14px;
   line-height: 1.8;
   letter-spacing: .8px;
@@ -44,10 +44,11 @@ li {
 }
 
 .section:nth-of-type(odd) {
-  background-color: #f7f7f7;
+  background-color: #2e2e31;
 }
 
 .inner {
+  font-family: 'Ubuntu', sans-serif;
   max-width: 1340px;
   margin: 0 auto;
   padding: 0 40px;
@@ -57,13 +58,14 @@ li {
  見出し
 ---------------------------------*/
 .title {
+  font-family: 'Orbitron', sans-serif;
   font-size: 34px;
   font-weight: bold;
   line-height: 1;
   margin-bottom: 40px;
   text-align: center;
   letter-spacing: .05em;
-  color: #000;
+  color: #eee;
 }
 
 .lead {
@@ -245,22 +247,18 @@ body {
   border: 1px solid #e6e6e6;
 }
 
-.btn-denim {
-  display: inline-block;
-  max-width: 180px;
-  text-align: center;
-  background-color: #293b6a;
-  font-size: 16px;
-  color: #FFF;
-  text-decoration: none;
-  font-weight: bold;
-  padding: 8px 16px;
-  border: 1px dashed #FFF;
-  box-shadow: 0px 0px 0px 2px #293b6a;/* box-shadowで外枠を */
-}
-
-.btn-denim:hover {
-  border-style: solid;
+.btn-denim{
+display: inline-block;
+max-width: 180px;
+text-align: center;
+background-color: #ccc;
+font-size: 16px;
+color: #2e2e31;
+text-decoration: none;
+font-weight: bold;
+padding: 8px 16px;
+border: 1px dashed #2e2e31;
+box-shadow: 0px 0px 0px 2px #ccc;/* box-shadowで外枠を */
 }
 
 .btn-open {
@@ -268,7 +266,7 @@ body {
   max-width: 180px;
   height:50px;
   text-align: center;
-  background-color: #9ec34b;
+  background-color: #2e2e31;
   font-size: 16px;
   line-height: 52px;
   color: #FFF;
@@ -286,14 +284,14 @@ body {
   position: absolute;
   top: 50%;
   left: 50%;
-  background : #FFF;
+  background : #9ec34b;
   opacity: 0;
   transform: translateX(-50%) translateY(-50%) rotate(45deg);
   transition: .2s;
   z-index: -1;
 }
 .btn-open:hover{
-  color: #9ec34b;
+  color: #2e2e31;
 }
 .btn-open:hover:after{
   height: 240%;
@@ -320,7 +318,7 @@ body {
 
 .btn-box:hover {
   border: 2px solid transparent;
-  color: #000;
+  color: #ccc;
 }
 
 .btn-box:before, .btn-box:after {
@@ -337,14 +335,14 @@ body {
 }
 
 .btn-box:before {
-  border-bottom: 2px solid #000;
-  border-left: 2px solid #000;
+  border-bottom: 2px solid #ccc;
+  border-left: 2px solid #ccc;
   transform-origin: 100% 0%;
 }
 
 .btn-box:after {
-  border-top: 2px solid #000;
-  border-right: 2px solid #000;
+  border-top: 2px solid #ccc;
+  border-right: 2px solid #ccc;
   transform-origin: 0% 100%;
 }
 
@@ -358,7 +356,7 @@ body {
   max-width: 180px;
   text-align: center;
   font-size: 16px;
-  color: #FFF;
+  color: #2e2e31;
   text-decoration: none;
   font-weight: bold;
   padding: 12px 24px;
@@ -376,13 +374,14 @@ body {
  Skill
 ---------------------------------*/
 .skill-title {
+  font-family: 'Orbitron', sans-serif;
   font-size: 34px;
   font-weight: bold;
   line-height: 1;
   margin-bottom: 40px;
   text-align: center;
   letter-spacing: .05em;
-  color: #ccc;
+  color: #eee;
 }
 
 .skill-list {
@@ -396,8 +395,9 @@ body {
   display: flex;
   align-items: flex-start;
   justify-content: space-between;
-  width: 48%;
-  margin-bottom: 50px;
+  width: 20%;
+  margin-top: 20px;
+  margin-bottom: 80px;
 }
 
 .skill-img {
@@ -411,13 +411,101 @@ body {
 }
 
 .skill-name {
-  margin-bottom: 3px;
-  color: #999;
+  margin-top: 5px;
+  color: #000;
 }
 
 .skill-text{
   color: #fff;
 }
+
+/* ボタン共通設定 */
+.btn04 {
+  /*線の基点とするためrelativeを指定*/
+position: relative;
+  /*ボタンの形状*/
+display:inline-block;
+  padding: 10px 30px;
+
+color:#fff;
+border:1px solid #ccc;
+  text-decoration: none;
+  outline: none;
+  /*はみ出す背景色を隠す*/
+overflow: hidden;
+}
+
+/*hoverした際のボタンの形状*/
+.btn04:hover {
+color:#555;
+border-color: transparent;
+  /*色の変化を遅らせる*/
+transition-delay: .6s;
+}
+
+/*線の設定*/
+.btn04 span{
+  display: block;
+  z-index: 2;
+}
+
+/*== 線から塗に変化（上から下） */
+
+/*線の設定*/
+.bordertop span::before,
+.bordertop span::after {
+  content: '';
+  /*絶対配置で線の位置を決める*/
+  position: absolute;
+  width:1px;
+  height: 0;
+  /*線の形状*/
+  background: #d9524a;
+  /*アニメーションの設定*/
+transition: all .3s;
+}
+
+/*左線*/
+.bordertop span::before {
+  left:0;
+  top:0;
+}
+
+/*右線*/
+.bordertop span::after {
+  right:0;
+  top:0;
+}
+
+/*hoverをすると線が伸びる*/
+.bordertop:hover span::before,
+.bordertop:hover span::after {
+  height: 100%;
+}
+
+/*背景の設定*/
+.bordertop::before{
+content: '';
+  /*絶対配置で線の位置を決める*/
+position: absolute;
+left: 0;
+  top:0;
+z-index: -1;
+  /*背景の形状*/
+width: 100%;
+height: 0;
+background:#fff;
+  /*アニメーションの設定*/
+transition: all .3s;
+}
+
+/*hoverをすると背景が伸びる*/
+.bordertop:hover::before{
+height: 100%;
+  /*0.4秒遅れてアニメーション*/
+transition-delay: .4s;
+}
+
 
 /*--------------------------------
  About

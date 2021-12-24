@@ -1,9 +1,10 @@
 body {
-  font-family: "Montserrat","Helvetica Neue",Arial,"Hiragino Kaku Gothic ProN","Hiragino Sans",Meiryo,sans-serif;
+  font-family: 'Moon Dance', cursive;
   font-size: 14px;
   line-height: 1.8;
   letter-spacing: .8px;
   color: #333;
+  background: url(/portfolio/img/12-paper-textures-600.jpg)  left top repeat;
 }
 
 a {
@@ -112,7 +113,7 @@ li {
 
 .header-nav-item a {
   position: relative;
-  font-size: 13px;
+  font-size: 20px;
   font-weight: bold;
   display: inline-block;
   padding: 5px 0;
@@ -172,17 +173,11 @@ li {
   max-width: 800px;
   margin: 0 auto;
 }
-.main-visual-img {
-  width: 20%;
-  margin-right: 30px;
-  border-radius: 50%;
-}
+
 .main-visual-img img {
   border-radius: 50%;
 }
-.main-visual-text {
-  flex: 1;
-}
+
 .main-visual-text p:not(:last-child) {
   margin-bottom: 30px;
 }
