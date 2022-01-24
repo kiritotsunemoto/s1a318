@@ -11,6 +11,7 @@
 body {
   margin: 0;
   padding: 40px;
+  background-image: url(wood.jpg);
 }
 .wrapper {
   background: #f9f8ee;
@@ -20,12 +21,23 @@ body {
   padding: 20px;
 }
 
+
 /*----------------------------
 header
 ----------------------------*/
 header { margin-bottom: 60px; }
 h1 { margin-bottom: 20px; }
-ul { background: #fff; }
+ul { 
+  background: #fff;
+  padding:  0;
+  list-style: none;
+  display: flex;
+  justify-content: center; 
+}
+li{
+  text-align: center;
+  flex: 0 1 20%;
+}
 a {
   display: block;
   color: #196f6a;
@@ -34,6 +46,7 @@ a {
 }
 a:hover { background: #e4e3d6; }
 
+
 /*----------------------------
 main
 ----------------------------*/
@@ -41,8 +54,14 @@ main {
   color: #504643;
   margin-bottom: 40px;
 }
-h2 { margin-bottom: 20px; }
-p { margin-bottom: 1em; }
+h2 { 
+  margin-bottom: 20px; 
+  text-align: center;
+}
+p { 
+  margin-bottom: 1em; 
+  text-align: center;
+}
 em {
   font-size: 1.2em;
   font-weight: bold;
@@ -52,3 +71,6 @@ em {
 /*----------------------------
 この下に、CSSの指定を記述していきましょう。
 ----------------------------*/
+.logo{
+  text-align: center;
+}
